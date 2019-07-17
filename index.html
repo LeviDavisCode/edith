@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+    <meta name="apple-mobile-web-app-title" content="EDITH" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="icon" href="logo.png"/>
+    <link rel="apple-touch-icon" href="logo.png"/>
+<link rel="apple-touch-icon" sizes="76x76" href="logo.png"/>
+<link rel="apple-touch-icon" sizes="120x120" href="logo.png"/>
+<link rel="apple-touch-icon" sizes="152x152" href="logo.png"/>
+    <style>
+    body {
+        font: bold 25px 'Open Sans', arial, sans-serif;
+    }
+
+    .img {
+      width: 600px;
+      height: auto;
+      transition: 1s;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      animation: orb 3.5s linear infinite alternate;
+    }
+
+    @keyframes orb {
+      from {width: 600px;}
+      50% {width: 630px}
+      to {width: 600px;}
+    }
+
+
+   .closebtn {
+     text-decoration: none;
+     color: black;
+     font-size: 60px;
+     margin-left: 20px;
+     margin-top: 150px;
+    }
+
+  .page {
+     height: 100%;
+     width: 0%;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     left: 0;
+     background-color: white;
+     color: black;
+     overflow-y: hidden;
+     transition: 0.3s;
+     text-align: center;
+    }
+    </style>
+    <title>E.D.I.T.H</title>
+  </head>
+  <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+<script>
+if (annyang) {
+ // Let's define a command.
+ var commands = {
+   'hello': function() { alert('Hello world!'); },
+   'are you there': function() { alert('Yes!!'); },
+   'edith open youtube': function() { window.open("https://youtube.com");},
+   'edith open google': function() { window.open("https://google.com"); },
+
+ };
+
+ // Add our commands to annyang
+ annyang.addCommands(commands);
+
+ // Start listening.
+ annyang.start();
+}
+</script>
+<script type="text/javascript">
+window.onload = function openpage() {
+document.getElementById("page").style.width = "100%";
+}
+
+function closepage() {
+document.getElementById("page").style.width = "0%";
+}
+</script>
+
+<div id="page" class="page">
+              <a href="javascript:void(0)" class="closebtn" onclick="closepage()">start edith</i></a>
+
+               <p style="margin-top: 200px;">Before you launch edith remember <br/>that shes in BETA 0.1<br/> and also dont forget to connect the glasses!</p>
+         </div>
+
+<img class="img" src="logo.png" align="middle">
+  </body>
